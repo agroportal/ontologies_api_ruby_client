@@ -1,4 +1,6 @@
+require 'active_support' # ActiveSupport 7+ needs it before any core_ext
 require 'active_support/core_ext/hash'
+require 'active_support/core_ext/numeric/time' # 10.minutes; no longer loaded by active_support/cache in 8.x
 
 module LinkedData
   module Client

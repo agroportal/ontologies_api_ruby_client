@@ -6,6 +6,3 @@ config/config.rb
 
 # Specific to IntelliJ
 .idea/
-
-# Specific to rbenv
-.ruby-version

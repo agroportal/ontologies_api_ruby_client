@@ -16,10 +16,6 @@ jobs:
   test:
 
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        ruby-version: ['2.7', '3.0']
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
@@ -27,7 +23,7 @@ jobs:
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: ${{ matrix.ruby-version }}
+        ruby-version: .ruby-version
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: set up config file
       run:  cp config/config.test.rb config/config.rb
