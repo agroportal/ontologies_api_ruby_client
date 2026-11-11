@@ -12,7 +12,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = "2.2.0"
 
-  gem.add_dependency('activesupport', '~> 7.0.4')
+  gem.add_dependency('activesupport', '>= 7.0', '< 9')
+  gem.add_dependency('benchmark') # lib/ontologies_api_client/http.rb; leaves Ruby's default gems in 4.0
   gem.add_dependency('excon','0.112.0')
   gem.add_dependency('faraday')
   gem.add_dependency('faraday-excon', '~> 2.0.0')
